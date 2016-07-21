@@ -1,4 +1,4 @@
-package _10_Inner_Classes._01_creating_inner_classes.exercise01;
+package _10_Inner_Classes._01_creating_inner_classes.exercises.exercise01;
 
 public class Outer {
 

@@ -1,4 +1,4 @@
-package _10_Inner_Classes._02_the_link_to_the_outer_class.exercise02;
+package _10_Inner_Classes._02_the_link_to_the_outer_class.exercises.exercise02;
 
 import _10_Inner_Classes._02_the_link_to_the_outer_class.Selector;
 import _10_Inner_Classes._02_the_link_to_the_outer_class.Sequence;

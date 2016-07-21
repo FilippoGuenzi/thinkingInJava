@@ -1,4 +1,4 @@
-package _10_Inner_Classes._01_creating_inner_classes.aside_practice;
+package _10_Inner_Classes._01_creating_inner_classes.exercises.aside_practice;
 
 public class HoldingClass {
 
