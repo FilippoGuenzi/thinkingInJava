@@ -11,12 +11,13 @@ public class External {
     public void method() {
         Outer outer = new Outer();
 
-        //Not allowed
+        // Not allowed because type access is private.
         //Inner inner;
 
-        //Not allowed
-        outer.new Inner(5);
+        // Not allowed even if the constructor is public. Type access prevents it.
+        //outer.new Inner(5);
 
+        //Indirect access through public method which has access to private members.
         outer.inner();
     }
 }
