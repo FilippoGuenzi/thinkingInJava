@@ -4,22 +4,11 @@ import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practic
 
 public class External {
 
+    // Not allowed. Type access prevents it : Inner is a protected class and the only classes which have access to it are the classes in the same package and
+    // the inheritors
+    // Inner inner;
+
     public static void main(String[] args) {
-        // Not allowed. Type access prevents it : Inner is a private class
-        // Inner inner;
-
-        // Not allowed even through an allowed instance since the context it's still this external method
-        // new Outer().new Inner(5);
-
-        // Allowed through indirect access
-        new Outer().inner();
-
-        new External().method();
-    }
-
-    public void method() {
-        // Not allowed. Type access prevents it : Inner is a package class
-        // Inner inner;
 
         // Not allowed even through an allowed instance since the context it's still this external method
         // new Outer().new Inner(5);
@@ -27,4 +16,5 @@ public class External {
         // Indirect access through accessible (public) method which has access to Outer private members.
         new Outer().inner();
     }
+
 }

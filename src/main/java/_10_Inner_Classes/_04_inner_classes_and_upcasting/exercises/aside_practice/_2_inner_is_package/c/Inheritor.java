@@ -1,46 +1,27 @@
 package _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._2_inner_is_package.c;
+import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._2_inner_is_package.a.Outer;
 
 // Not allowed to extend type we can't even access
 // public class Inheritor extends Inner {}
 
-import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._2_inner_is_package.a.Outer;
-
 public class Inheritor extends Outer {
-    // Allowed
-    Inner inner;
+
+    // Not allowed. Type access prevents it : Inner is a package class and the only classes which have access to it are the classes in the same package
+    // Inner inner;
 
     public static void main(String[] args) {
 
-        // Allowed
-        Inner inner;;
+        // Not Allowed
+        // new Inheritor().new Inner(5);
 
-        // Allowed
-        new Inheritor().new Inner(5);
-
-        // Allowed
-        new Outer().new Inner(5);
+        // Not allowed even if the constructor is public. Type access prevents it : Inner is a package class and we're here outside of its package
+        // Not allowed even through an allowed instance since the context it's still this external method.
+        // new Outer().new Inner(5);
 
         // Allowed through indirect access
         new Outer().inner();
         new Inheritor().inner();
 
-        new Inheritor().method();
-    }
-
-    public void method() {
-        // Allowed
-        Inner inner;;
-
-        // Allowed
-        new Inner(5);
-
-        // Allowed
-        new Outer().new Inner(5);
-        this.new Inner(5);
-
-        // Indirect access through accessible (public) method which has access to Outer private members.
-        new Outer().inner();
-        this.inner();
     }
 
 }

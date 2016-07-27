@@ -4,24 +4,10 @@ import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practic
 
 public class SamePackage {
 
+    // Allowed type access : Inner is package and here we are in the same package
+    Inner inner;
+
     public static void main(String[] args) {
-
-        // Allowed type access : Inner is a package
-        Inner inner;
-
-        // Allowed type access and allowed constructor access
-        new Outer().new Inner(5);
-
-        // Allowed through indirect access
-        new Outer().inner();
-
-        new SamePackage().method();
-
-    }
-
-    public void method() {
-        // Allowed from here because same package and type of Inner is package.
-        Inner inner;
 
         // Not allowed from here because constructor is private
         // new Outer().new Inner(5l);
@@ -43,5 +29,6 @@ public class SamePackage {
 
         // Indirect access through public method which has access to private members.
         new Outer().inner();
+
     }
 }

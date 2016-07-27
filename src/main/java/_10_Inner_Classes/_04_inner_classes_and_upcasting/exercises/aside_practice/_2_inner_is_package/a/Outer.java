@@ -6,12 +6,15 @@ public class Outer {
         return new Inner(5l);
     }
 
-    protected class Inner {
+    class Inner {
 
         public int i;
         protected int j;
         int k;
         private int l;
+
+        public Inner() {
+        }
 
         public Inner(int i) {}
         protected Inner(String s) {}

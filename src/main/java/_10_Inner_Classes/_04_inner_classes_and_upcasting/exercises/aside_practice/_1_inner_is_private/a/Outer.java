@@ -6,7 +6,7 @@ public class Outer {
         return new Inner(5l);
     }
 
-    protected class Inner {
+    private class Inner {
 
         public int i;
         protected int j;
