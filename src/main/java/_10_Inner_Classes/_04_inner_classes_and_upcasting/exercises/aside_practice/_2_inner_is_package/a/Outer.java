@@ -6,42 +6,28 @@ public class Outer {
         return new Inner(5l);
     }
 
-    class Inner {
+    protected class Inner {
 
         public int i;
         protected int j;
         int k;
         private int l;
 
-        public Inner(int i) {
-        }
+        public Inner(int i) {}
+        protected Inner(String s) {}
+        Inner(boolean b) {}
+        private Inner(long l) {}
 
-        protected Inner(String s) {
-        }
-
-        Inner(boolean b) {
-        }
-
-        private Inner(long l) {
-        }
-
-        public void pu() {
-        }
-
-        protected void pro() {
-        }
-
-        void pa() {
-        }
-
-        private void pri() {
-        }
+        public void pu() {}
+        protected void pro() {}
+        void pa() {}
+        private void pri() {}
     }
 
     public static void main(String[] args) {
-        Outer outer = new Outer();
-        Inner inner = outer.new Inner(5l);
-        System.out.println(inner.l);
+        new Outer();
+        new Outer().new Inner(5l);
+        new Outer().new Inner(5l).pri();
     }
 
 }

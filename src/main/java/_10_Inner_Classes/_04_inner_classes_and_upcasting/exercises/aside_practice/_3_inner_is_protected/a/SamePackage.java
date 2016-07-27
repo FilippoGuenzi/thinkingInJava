@@ -5,8 +5,17 @@ import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practic
 public class SamePackage {
 
     public static void main(String[] args) {
-        SamePackage samePackage = new SamePackage();
-        samePackage.method();
+
+        // Allowed type access : Inner is a protected
+        Inner inner;
+
+        // Allowed type access and allowed constructor access
+        new Outer().new Inner(5);
+
+        // Allowed through indirect access
+        new Outer().inner();
+
+        new SamePackage().method();
     }
 
     public void method() {
