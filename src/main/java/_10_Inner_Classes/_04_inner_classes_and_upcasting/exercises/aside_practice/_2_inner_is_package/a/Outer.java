@@ -13,9 +13,6 @@ public class Outer {
         int k;
         private int l;
 
-        public Inner() {
-        }
-
         public Inner(int i) {}
         protected Inner(String s) {}
         Inner(boolean b) {}

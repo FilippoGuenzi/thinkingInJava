@@ -11,11 +11,11 @@ public class Inheritor extends Outer {
 
     public static void main(String[] args) {
 
-        // Not Allowed
+        // Not allowed even if the constructor is public. Type access prevents it : Inner is a package class and we're here outside of its package
         // new Inheritor().new Inner(5);
 
         // Not allowed even if the constructor is public. Type access prevents it : Inner is a package class and we're here outside of its package
-        // Not allowed even through an allowed instance since the context it's still this external method.
+        // Not allowed even through an allowed instance since the context from which it's called is this external method.
         // new Outer().new Inner(5);
 
         // Allowed through indirect access
