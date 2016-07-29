@@ -13,5 +13,9 @@ public class SamePackage {
         // Indirect access through accessible (public) method which has access to Outer private members.
         new Outer().inner();
 
+        // Not Allowed even if members are public : because reference type is private.
+        // Even if we have access to the reference, the reference type access still can stop us from having access to "accessible" members.
+        // new Outer().inner().pub();
+        // int a = new Outer().inner().i;
     }
 }

@@ -18,9 +18,9 @@ public class Outer {
         Inner(boolean b) {}
         private Inner(long l) {}
 
-        public void pu() {}
+        public void pub() {}
         protected void pro() {}
-        void pa() {}
+        void pac() {}
         private void pri() {}
     }
 

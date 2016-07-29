@@ -1,4 +1,5 @@
 package _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.c;
+
 import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.a.Outer;
 
 // Not allowed to extend type we can't even access
@@ -21,6 +22,11 @@ public class Inheritor extends Outer {
         // Allowed through indirect access
         new Outer().inner();
         new Inheritor().inner();
+
+        // Not Allowed even if members are public : because reference type is private.
+        // Even if we have access to the reference, the reference type access still can stop us from having access to "accessible" members.
+        // new Outer().inner().pub();
+        // int a = new Outer().inner().i;
 
     }
 }

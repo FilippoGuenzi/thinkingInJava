@@ -40,6 +40,28 @@ public class Inheritor extends Outer {
         new Outer().inner();
         new Inheritor().inner();
 
+        // Allowed because :
+        // - reference type allows access to its members
+        // - members access allows access to them
+        new Outer().inner().pub();
+
+        // Not allowed because of member access (private, package, protected)
+        // Here it's normal not to have access to protected Inner's members because we're not inheriting from Inner but from Outer
+        // new Outer().inner().pri();
+        // new Outer().inner().pac();
+        // new Outer().inner().pro();
+
+        // Allowed because :
+        // - reference type allows access to its members
+        // - members access allows access to them
+        int a = new Outer().inner().i;
+
+        // Not allowed because of member access (private, package, protected)
+        // Here it's normal not to have access to protected Inner's members because we're not inheriting from Inner but from Outer
+        // int b = new Outer().inner().j;
+        // int c = new Outer().inner().k;
+        // int d = new Outer().inner().l;
+
     }
 
 }

@@ -30,5 +30,23 @@ public class SamePackage {
         // Indirect access through public method which has access to private members.
         new Outer().inner();
 
+        // Allowed because :
+        // - reference type allows access to its members
+        // - members access allows access to them
+        new Outer().inner().pub();
+        new Outer().inner().pro();
+        new Outer().inner().pac();
+        // Not allowed because of member access (private)
+        // new Outer().inner().pri();
+
+        // Allowed because :
+        // - reference type allows access to its members
+        // - members access allows access to them
+        int a = new Outer().inner().i;
+        int b = new Outer().inner().j;
+        int c = new Outer().inner().k;
+        // Not allowed because of member access (private)
+        // int d = new Outer().inner().l;
+
     }
 }
