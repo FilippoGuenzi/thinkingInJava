@@ -13,7 +13,9 @@ The access of an Inner class behaves the same as the access of other members of 
 The access of a class determines :
 - the possibility to declare variables of this type in a given class
 - the possibility to instantiate the class/get a reference of it (also determined by its constructors access) (without mentioning indirect access)
-- the access to its members : if you can get a reference of a private class through indirect access and try to get public members you can't
+The access to its members is restricted by the reference variable type, not by the reference value type : if you can get a reference of a private class through indirect access and try to get public members :
+- you can't if the reference variable is typed with its value type.
+- you can if the reference variable is typed with a public interface the class extends.
 
 So the access to the members of a class is restricted by the class access. 
 
