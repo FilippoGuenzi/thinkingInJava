@@ -1,12 +1,14 @@
 package _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.a;
 
+import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.Interface;
+
 public class Outer {
 
     public Inner inner() {
         return new Inner(5l);
     }
 
-    private class Inner {
+    private class Inner implements Interface{
 
         public int i;
         protected int j;

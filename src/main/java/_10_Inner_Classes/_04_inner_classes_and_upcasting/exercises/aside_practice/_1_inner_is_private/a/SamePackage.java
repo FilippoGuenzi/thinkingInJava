@@ -1,5 +1,7 @@
 package _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.a;
 
+import _10_Inner_Classes._04_inner_classes_and_upcasting.exercises.aside_practice._1_inner_is_private.Interface;
+
 public class SamePackage {
 
     // Not allowed. Type access prevents it : Inner is a private class and the only class which has access to it is the enclosing class
@@ -17,5 +19,9 @@ public class SamePackage {
         // Even if we have access to the reference, the reference type access still can stop us from having access to "accessible" members.
         // new Outer().inner().pub();
         // int a = new Outer().inner().i;
+
+        // In fact it's variable type that can restrict access to members, not value type.
+        Interface inner = new Outer().inner();
+        inner.pub();
     }
 }

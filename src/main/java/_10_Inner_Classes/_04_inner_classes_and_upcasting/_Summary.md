@@ -6,7 +6,7 @@ Enclosing class has full access to all members of its inner class from public to
 The access of an Inner class behaves the same as the access of other members of the enclosing class :
 - private : access restricted to the class itself (and to the enclosing class and to its inner classes)
 - package :  access restricted to the same package
-- protected : access restricted to the same package and to the inheritors of the enclosing class
+- protected : access restricted to the same package and to the inheritors **of the enclosing class**
 - public : access to every class
 
 **Class access and members access**
@@ -17,7 +17,7 @@ The access to its members is restricted by the reference variable type, not by t
 - you can't if the reference variable is typed with its value type.
 - you can if the reference variable is typed with a public interface the class extends.
 
-So the access to the members of a class is restricted by the class access. 
+So the access to the members of a class is restricted by the class access if this class is used as the type of the reference.
 
 **Indirect access**
 It's not because a class member has an access (private, package, protected) that stops us to use it directly in a scope that we can not use it in that scope.
