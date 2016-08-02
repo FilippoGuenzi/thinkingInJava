@@ -23,10 +23,11 @@ Since anonymous inner classes have no name they can't have a constructor, this r
 For field initialisation :
 - whether the field is in the base class and can be initialized by the base class constructor
 - or you initialize the field in the field declaration, passing the value as a **final** parameter of the enclosing method :
-public MyInterface method(final String s){
-    return new MyInterface(){
-        private String address = s;
+    public MyInterface method(final String s){
+        return new MyInterface(){
+            private String address = s;
+        }
     }
-}
-It looks strange here that s can go through the new Interface(){} scope without it passing the value.
-In fact it's not a real scope. MyInterface is just an upcast of a new object of a new class, so MyInterface() is not a constructor nor a method.
+    It looks strange here that s can go through the new Interface(){} scope without it passing the value.
+    In fact it's not a real scope. MyInterface is just an upcast of a new object of a new class, so MyInterface() is not a constructor nor a method.
+-
