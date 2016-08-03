@@ -14,4 +14,6 @@ public interface Triangle {
 
     double getGamma();
 
+    double getSurface();
+
 }

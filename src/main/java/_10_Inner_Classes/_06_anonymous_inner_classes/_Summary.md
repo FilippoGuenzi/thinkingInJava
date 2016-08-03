@@ -30,4 +30,6 @@ For field initialisation :
     }
     It looks strange here that s can go through the new Interface(){} scope without it passing the value.
     In fact it's not a real scope. MyInterface is just an upcast of a new object of a new class, so MyInterface() is not a constructor nor a method.
--
+- or with instance initialization between braces class C { ... {} ...} (see aside practice). You can have as many instanciation blocks as you want, in different places.
+
+
