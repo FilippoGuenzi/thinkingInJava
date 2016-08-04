@@ -7,6 +7,6 @@ class ClassToBeAccessed implements Interface {
     public int a = 5;
 
     public void method() {
-        System.out.println("method in ClassToBeAccessed running");
+        System.out.println("turnCycle in ClassToBeAccessed running");
     }
 }

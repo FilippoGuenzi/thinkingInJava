@@ -9,10 +9,10 @@ public class External {
 
     public static void main(String[] args) {
 
-        // Not allowed even through an allowed instance since the context it's still this external method
+        // Not allowed even through an allowed instance since the context it's still this external turnCycle
         // new Outer().new Inner(5);
 
-        // Indirect access through accessible (public) method which has access to Outer private members.
+        // Indirect access through accessible (public) turnCycle which has access to Outer private members.
         new Outer().inner();
 
         // Not Allowed even if members are public : because reference type is private.

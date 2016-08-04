@@ -35,7 +35,7 @@ public class Parcel2 {
 
     public void ship(String dest) {
         // The instanciation of the inner class needs the existence of an outer instance instanciating it.
-        // Here it is the case since where not in a static method : we're in an instance.
+        // Here it is the case since where not in a static turnCycle : we're in an instance.
         Contents c = contents();
         Destination d = to(dest);
         System.out.println(d.readLabel());

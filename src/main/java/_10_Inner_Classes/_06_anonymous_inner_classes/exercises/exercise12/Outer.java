@@ -9,7 +9,7 @@ public class Outer {
     }
 
     private void m() {
-        System.out.println("private outer method m");
+        System.out.println("private outer turnCycle m");
     }
 
     public Inner method() {

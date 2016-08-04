@@ -5,7 +5,7 @@ public class Outer {
     private int i = 0;
 
     private void method() {
-        System.out.println("outer class method; i = " + i);
+        System.out.println("outer class turnCycle; i = " + i);
     }
 
     public class Inner {

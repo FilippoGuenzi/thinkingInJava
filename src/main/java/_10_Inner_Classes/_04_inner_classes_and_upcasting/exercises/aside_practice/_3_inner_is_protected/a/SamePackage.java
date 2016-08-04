@@ -27,7 +27,7 @@ public class SamePackage {
         // - constructor is accessible from here : same package and type of Inner(int i) is public
         new Outer().new Inner(5);
 
-        // Indirect access through public method which has access to private members.
+        // Indirect access through public turnCycle which has access to private members.
         new Outer().inner();
 
         // Allowed because :

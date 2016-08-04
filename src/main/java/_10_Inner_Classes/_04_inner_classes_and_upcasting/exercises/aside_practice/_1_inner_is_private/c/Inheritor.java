@@ -16,7 +16,7 @@ public class Inheritor extends Outer {
         // new Inheritor().new Inner(5);
 
         // Not allowed even if the constructor is public. Type access prevents it : Inner is a private class
-        // Not allowed even through an allowed instance since the context it's still this external method.
+        // Not allowed even through an allowed instance since the context it's still this external turnCycle.
         // new Outer().new Inner(5);
 
         // Allowed through indirect access
